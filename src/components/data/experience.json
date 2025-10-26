@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "role": "Senior  Developer Engineer SDE - II",
+    "organisation": "Dataline imagine pvt. ltd.",
+    "startDate": "Aug, 2025",
+    "endDate": "Present",
+    "location": "Patna,Bihar",
+    "experiences": [
+      "Worked on ecommerce website",
+      "Worked with the dataline "
+    ],
+    "imageSrc": "company/google.png"
+  },
+  {
+    "id": 2,
+    "role": "Full Stack Developer - I",
+    "organisation": "Inter",
+    "startDate": "Aug, 2023",
+    "endDate": "Aug, 2023",
+    "location": "Remont",
+    "experiences": [
+      "Worked on Windows 10 terminal",
+      "Worked on Window 11 Upcoming features"
+    ],
+    "imageSrc": "company/microsoft.png"
+  },
+  {
+    "id": 3,
+    "role": "Software Development Engineer - Intern",
+    "organisation": "Netflix",
+    "startDate": "Apr, 2021",
+    "endDate": "Jun, 2022",
+    "location": "Bengluru, India",
+    "experiences": [
+      "Worked on Nextflix payment system",
+      "Helped to create UI for video player"
+    ],
+    "imageSrc": "company/netflix.png"
+  }
+]
