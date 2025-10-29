@@ -45,7 +45,6 @@ const Contact = () => {
 };
 
 export default Contact;*/
-import React from "react";
 import { FaInstagram, FaGithubSquare } from "react-icons/fa";
 import { CiFacebook, CiLinkedin } from "react-icons/ci";
 import { FaSquareXTwitter } from "react-icons/fa6";

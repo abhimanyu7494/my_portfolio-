@@ -10,7 +10,7 @@ const Projects = () => {
           {project.map((data) => (
             <>
               <div
-                key={data.id}
+                key={data.key}
                 className="my-4 col-sm-6 col-md-4 col-lg-3 mx-4"
               >
                 <div
