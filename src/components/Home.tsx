@@ -26,8 +26,16 @@ const Home = () => {
 
   return (
     <>
-      <div className="container home" id="home" style={{flexwrap: "wrap"}}>
-        <div className="left" data-aos="fade-up-right" data-aos-duration="1000">
+      <div
+        className="container home"
+        id="home"
+        style={{ display: "flex", flexWrap: "wrap" }}
+      >
+        <div
+          className="left"
+          data-aos="fade-up-right"
+          data-aos-duration="1000"
+        >
           <h1 ref={typedRef}></h1>
 
           <a
@@ -39,7 +47,11 @@ const Home = () => {
           </a>
         </div>
         <div className="right">
-          <div className="img" data-aos="fade-up-left" data-aos-duration="1000">
+          <div
+            className="img"
+            data-aos="fade-up-left"
+            data-aos-duration="1000"
+          >
             <img src={`/assets/${hero.imgSrc}`} alt="hero" />
           </div>
         </div>
