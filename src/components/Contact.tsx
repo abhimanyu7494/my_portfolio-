@@ -1,137 +1,87 @@
-/*import React from "react";
-import { FaInstagram } from "react-icons/fa";
-import { CiFacebook } from "react-icons/ci";
-import { CiLinkedin } from "react-icons/ci";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaGithubSquare } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
-
-const Contact = () => {
-  return (
-    <>
-      <div className="container contact" id="contact">
-        <h1>CONTACT ME</h1>
-        <div
-          className="contact-icon"
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-        >
-          <a href="https://www.google.com" target="_blank" className="items">
-            <FaInstagram className="icons" />
-          </a>
-          <a href="https://www.google.com" target="_blank" className="items">
-            <CiFacebook className="icons" />
-          </a>
-          <a href="https://www.google.com" target="_blank" className="items">
-            <CiLinkedin className="icons" />
-          </a>
-          <a href="https://www.google.com" target="_blank" className="items">
-            <FaSquareXTwitter className="icons" />
-          </a>
-          <a href="https://www.github.com" target="_blank" className="items">
-            <FaGithubSquare className="icons" />
-          </a>
-          <a
-            href="mailto:webdevmastery@gmail.com"
-            target="_blank"
-            className="items"
-          >
-            <SiGmail className="icons" />
-          </a>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default Contact;*/
 import { FaInstagram, FaGithubSquare } from "react-icons/fa";
 import { CiFacebook, CiLinkedin } from "react-icons/ci";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { SiGmail, SiWhatsapp } from "react-icons/si";
 
 const Contact = () => {
+  const icons = [
+    {
+      link: "https://www.instagram.com/",
+      icon: <FaInstagram style={{ color: "#E4405F" }} />,
+    },
+    {
+      link: "https://www.facebook.com/",
+      icon: <CiFacebook style={{ color: "#1877F2" }} />,
+    },
+    {
+      link: "https://www.linkedin.com/",
+      icon: <CiLinkedin style={{ color: "#0077B5" }} />,
+    },
+    {
+      link: "https://twitter.com/",
+      icon: <FaSquareXTwitter style={{ color: "#000" }} />,
+    },
+    {
+      link: "https://github.com/",
+      icon: <FaGithubSquare style={{ color: "#171515" }} />,
+    },
+    {
+      link: "mailto:sabhimanyu9263@gmail.com",
+      icon: <SiGmail style={{ color: "#EA4335" }} />,
+    },
+    {
+      link: "https://wa.me/919661104667",
+      icon: <SiWhatsapp style={{ color: "#25D366" }} />,
+    },
+  ];
+
   return (
-    <>
-      <div className="container contact" id="contact">
-        <h1>CONTACT ME</h1>
-        <div
-          className="contact-icon"
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-        >
-          {/* Instagram */}
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="items"
-          >
-            <FaInstagram className="icons" style={{ color: "#E4405F" }} />
-          </a>
+    <section id="contact" className="container" style={{ padding: "80px 20px" }}>
+      <h1>Contact Me</h1>
 
-          {/* Facebook */}
+      <div
+        className="contact-icon"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          gap: "20px",
+          marginTop: "30px",
+        }}
+      >
+        {icons.map((item, index) => (
           <a
-            href="https://www.facebook.com/"
+            key={index}
+            href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="items"
+            style={{
+              backgroundColor: "white",
+              height: "70px",
+              width: "70px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: "50%",
+              border: "2px solid rgb(70, 240, 70)",
+              transition: "all 0.3s ease-in-out",
+              fontSize: "2rem",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "scale(1.15)";
+              e.currentTarget.style.boxShadow =
+                "0 0 20px rgba(70, 240, 70, 0.6)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "scale(1)";
+              e.currentTarget.style.boxShadow = "none";
+            }}
           >
-            <CiFacebook className="icons" style={{ color: "#1877F2" }} />
+            {item.icon}
           </a>
-
-          {/* LinkedIn */}
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="items"
-          >
-            <CiLinkedin className="icons" style={{ color: "#0077B5" }} />
-          </a>
-
-          {/* X (Twitter) */}
-          <a
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="items"
-          >
-            <FaSquareXTwitter className="icons" style={{ color: "#000000" }} />
-          </a>
-
-          {/* GitHub */}
-          <a
-            href="https://github.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="items"
-          >
-            <FaGithubSquare className="icons" style={{ color: "#171515" }} />
-          </a>
-
-          {/* Gmail */}
-          <a
-            href="mailto:sabhimanyu9263@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="items"
-          >
-            <SiGmail className="icons" style={{ color: "#EA4335" }} />
-          </a>
-
-          {/* WhatsApp */}
-          <a
-            href="https://wa.me/919661104667"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="items"
-          >
-            <SiWhatsapp className="icons" style={{ color: "#25D366" }} />
-          </a>
-        </div>
+        ))}
       </div>
-    </>
+    </section>
   );
 };
 
